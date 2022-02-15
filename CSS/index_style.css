@@ -1,0 +1,48 @@
+.container{
+    /* Step 1: Set display to grid */
+      display:grid;
+   /* Step 2: setup rows amd columns */
+      grid-template-columns: 1fr;
+      /* grid-template-columns: 300px 300px 300px; */
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "hd"
+      "sd"
+      "main"
+      "ft";
+      border: 2px solid blue;
+
+  }
+  .box{
+  /* width: 250px;
+    height: 150px; */
+    border: 1px solid red;
+    background: #F8FA9D;
+    }
+
+  .header{
+    /* row start/column start/ row end/ column end */
+    grid-area:hd;
+  }
+
+  .footer{
+    grid-area: ft;  
+  }
+  .sidebar{
+    grid-area: sd;
+  }
+  .content{
+    grid-area: main;
+  }
+
+  @media(min-width:900px){
+      .container{
+        grid-template-columns: repeat(8, 1fr);
+        /* grid-template-columns: 300px 300px 300px; */
+        grid-template-rows: 150px 800px 100px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "sd main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+      }
+  }
