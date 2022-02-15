@@ -4,11 +4,11 @@
    /* Step 2: setup rows amd columns */
       grid-template-columns: 1fr;
       /* grid-template-columns: 300px 300px 300px; */
-      grid-template-rows: 150px 1fr 150px 150px;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-template-areas: 
       "hd"
-      "main"
       "sd"
+      "main"
       "ft";
       border: 2px solid blue;
 
@@ -28,32 +28,21 @@
   .footer{
     grid-area: ft;  
   }
-
   .sidebar{
     grid-area: sd;
   }
-
   .content{
     grid-area: main;
-  }
-
-  .blogs-container {
-    /* grid-area: main; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
   }
 
   @media(min-width:900px){
       .container{
         grid-template-columns: repeat(8, 1fr);
         /* grid-template-columns: 300px 300px 300px; */
-        grid-template-rows: 150px 1fr 100px;
+        grid-template-rows: 150px 800px 100px;
         grid-template-areas: 
         "hd hd hd hd hd hd hd hd"
         "sd main main main main main main main"
         "ft ft ft ft ft ft ft ft";
-        max-width: 600px;
       }
   }
