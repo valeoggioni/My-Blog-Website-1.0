@@ -1,40 +1,52 @@
-.container{
+@import "blog_design_system.css";
+
+.main-container{
     /* Step 1: Set display to grid */
       display:grid;
    /* Step 2: setup rows amd columns */
       grid-template-columns: 1fr;
-      grid-template-rows: 150px 1fr 1fr;
+      grid-template-rows: 150px 1fr 150px;
    /* Step : setup named grid areas */
       grid-template-areas: 
         "hd"
         "cont"
         "ft" ;
-  
-      border: 2px solid yellow;
-
   }
-  .box{
-    border: 1px solid red;
-    background: #F8FA9D;
-    }
+
+  
 
   .header{
       /* Set elements grid-area here */
       grid-area: hd;
+      padding: 10px;
+    
   }
 
   .footer{
     /* Set elements grid-area here */
     grid-area: ft;
+    padding: 10px;
   }
-  .feature{
-    /* Set elements grid-area here */
-    display: none;
-  }
+  
   .content{
     /* Set elements grid-area here */
     grid-area: cont;
+    padding: 10px;
   }
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
+
+  .image-slide {
+    grid-area: cont;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
 
   @media(min-width:900px){
       .container {

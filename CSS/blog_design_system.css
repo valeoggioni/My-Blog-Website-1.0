@@ -1,0 +1,43 @@
+
+h1 {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: sans-serif;
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* .main-container {
+    border: 2px solid blue;
+} */
+
+.box{
+    border: 1px solid lightblue;
+    }
+
+.footer{
+    background-color:lightblue;
+}
+
+.footer p {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+a {
+    color: blue;
+    font-family: monospace;
+}
