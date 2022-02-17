@@ -16,6 +16,7 @@
   .box{
   /* width: 250px;
     height: 150px; */
+    
     border: 1px solid red;
     background: #F8FA9D;
     }
@@ -38,14 +39,16 @@
   }
 
   .blogs-container {
-    /* grid-area: main; */
-    display: flex;
+    grid-area: main;
+    display: grid;
+    box-sizing: border-box;
+    flex-basis: 50%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  @media(min-width:900px){
+  @media(min-width:600px){
       .container{
         grid-template-columns: repeat(8, 1fr);
         /* grid-template-columns: 300px 300px 300px; */
@@ -54,6 +57,6 @@
         "hd hd hd hd hd hd hd hd"
         "sd main main main main main main main"
         "ft ft ft ft ft ft ft ft";
-        max-width: 600px;
+        max-width: 1000px;
       }
   }
