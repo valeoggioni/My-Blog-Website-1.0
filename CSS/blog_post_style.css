@@ -5,10 +5,11 @@
       display:grid;
    /* Step 2: setup rows amd columns */
       grid-template-columns: 1fr;
-      grid-template-rows: 150px 1fr 150px;
+      grid-template-rows: 150px 1fr 1fr 150px;
    /* Step : setup named grid areas */
       grid-template-areas: 
         "hd"
+        "images"
         "cont"
         "ft" ;
   }
@@ -41,7 +42,7 @@
   }
 
   .image-slide {
-    grid-area: cont;
+    grid-area: images;
     display: flex;
     flex-wrap: wrap;
   }
@@ -51,11 +52,11 @@
   @media(min-width:900px){
       .container {
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 150px 800px 100px;
-    /* Step : setup named grid areas */
+        grid-template-rows: 150px 1fr 100px;
+        /* Step : setup named grid areas */
         grid-template-areas: 
         "hd hd hd hd hd hd hd hd"
-        "cont cont cont cont cont cont cont cont"
+        "images images cont cont cont cont cont cont"
         "ft ft ft ft ft ft ft ft" ;
       }
   }
