@@ -37,20 +37,19 @@
 
   img {
     width: 100px;
-    height: 100px;
     margin: 5px;
   }
 
   .image-slide {
     grid-area: images;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
   }
 
 
 
   @media(min-width:900px){
-      .container {
+      .main-container {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: 150px 1fr 100px;
         /* Step : setup named grid areas */
@@ -59,4 +58,9 @@
         "images images cont cont cont cont cont cont"
         "ft ft ft ft ft ft ft ft" ;
       }
+
+      img {
+        width: 250px;
+        
   }
+}
